@@ -1,0 +1,119 @@
+.guide {
+	display: flex;
+	height: 100%;
+	position: relative;
+    top: 0%;
+    margin: 0 10%;
+	align-items: center;
+}
+.myslide{
+	display: none;
+	overflow: hidden;
+}
+
+.poster {
+	height: 70vh;
+}
+
+.prev, .next{
+	position: absolute;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+	z-index: 2;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; /* blue */
+}
+.next{
+	right: 0;
+}
+.prev {
+	left: 0;
+}
+
+
+/* javascript */
+.active, .dot:hover{
+	border-color: #00a7ff; /* blue */
+}
+/* /javascript */
+
+/* muslide add fade */
+.fades {
+  -webkit-animation-name: fades;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fades;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fades {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fades {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+/* /muslide add fade */
+
+
+.imgContainer{
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 3s;
+	letter-spacing: 2px;
+	line-height: 35px;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+
+@-webkit-keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+
+@keyframes posi {
+  from {left: 60%;}
+  to {left: 50%;}
+}
+
+.txt h1{
+	color: #00a7ff; /* blue */
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+.txt p{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+@media (max-width: 500px) {
+	.prev, .next {
+		font-size: 30px;
+	}
+	.next {
+		bottom: 40px;
+		right: 0px;
+	}
+	.prev {
+		bottom: 40px;
+	}
+	.imgContainer {
+		top: 20%;
+	}
+	.poster {
+		height: 50vh;
+	}
+}
