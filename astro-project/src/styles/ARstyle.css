@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Solver";
+  src: url(../fonts/BadScript-Regular.ttf) format('truetype');
+  font-weight: normal;
+}
+
+* {
+    font-family: "Solver";
+}
+body{
+    background: url(../template/compressed\ old\ page.jpg);
+    height: 100%;
+    margin: 20px;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+ul {
+    margin-top: 0;
+}
+
+span {
+    cursor: pointer;
+}
+
+.parent-sub-item {
+    display: none;
+}
+
+.active {
+    display: block;
+    line-height: 200%;
+    animation: animate .5s ;
+}
+
+.engage {
+    list-style-type: "> ";
+}
+
+.stateContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-decoration: double underline;
+}
+
+.state {
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    text-decoration: double underline rgb(255, 255, 255);  
+}
+
+@keyframes animate {
+    0% {
+        line-height: 50%;
+    } 100% {
+        line-height: 200%;
+    }
+}
