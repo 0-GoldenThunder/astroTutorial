@@ -1,14 +1,14 @@
-!function(e){var l=new ScrollMagic.Controller,i=["#slide01 header","#slide02 header","#slide03 header"];
-if(!Modernizr.touch){
-    i.forEach(function(e,i){{
-        var r=i+1;
-        new ScrollMagic.Scene({triggerElement:e,offset:-95}).setClassToggle("#slide0"+ r,"is-active").addTo(l)
-    }
+// !function(e){var l=new ScrollMagic.Controller,i=["#slide01 header","#slide02 header","#slide03 header"];
+// if(!Modernizr.touch){
+//     i.forEach(function(e,i){{
+//         var r=i+1;
+//         new ScrollMagic.Scene({triggerElement:e,offset:-95}).setClassToggle("#slide0"+ r,"is-active").addTo(l)
+//     }
     
-});
- { new ScrollMagic.Scene({triggerElement:".slide.is-light"}).setClassToggle("nav","is-dark").addTo(l) }
-}
-}(jQuery);
+// });
+//  { new ScrollMagic.Scene({triggerElement:".slide.is-light"}).setClassToggle("nav","is-dark").addTo(l) }
+// }
+// }(jQuery);
 
 let logo = document.querySelector('.image');
 let light = document.querySelector('.light');
@@ -71,4 +71,23 @@ function navmChange() {
 let titles = new Audio("https://azuracast.iqbpn.com/radio/8000/radio.mp3");
 console.log(titles.name);
 
-   
+// sss
+
+setInterval(function () {
+  const timePerPixel = 15;
+
+  const containerWidth = 200;
+
+  const messages = document.querySelectorAll('.running');
+
+  messages.forEach(message => {
+    const messageWidth = message.offsetWidth;
+    const distance = messageWidth + containerWidth;
+    const duration = timePerPixel * distance;
+
+    message.style.animationDuration = `${duration}ms`;
+  });
+}, 2000);
+
+// window.jQuery || document.write('<script src="vendor/jquery-1.11.2.min.js"><\/script>');
+

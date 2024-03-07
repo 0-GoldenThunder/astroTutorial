@@ -1,11 +1,13 @@
 const myslide = document.querySelectorAll('.myslide');
 let counter = 1;
+
 slidefun(counter);
 
 function plusSlides(n) {
 	counter += n;
 	slidefun(counter);
 }
+
 function currentSlide(n) {
 	counter = n;
 	slidefun(counter);
@@ -25,3 +27,11 @@ function slidefun(n) {
 	   }
 	myslide[counter - 1].style.display = "block";
 }
+
+
+document.querySelector('.prev').addEventListener('click', () => {
+	plusSlides(1)
+})
+document.querySelector('.next').addEventListener('click', () => {
+	plusSlides(-1)
+})
