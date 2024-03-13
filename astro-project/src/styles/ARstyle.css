@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Solver";
-  src: url(../fonts/BadScript-Regular.ttf) format('truetype');
+  src: url(../styles/fonts/BadScript-Regular.ttf) format('truetype');
   font-weight: normal;
 }
 
@@ -8,7 +8,7 @@
     font-family: "Solver";
 }
 body{
-    background: url(../template/compressed\ old\ page.jpg);
+    background: url(/template/compressed\ old\ page.jpg);
     height: 100%;
     margin: 20px;
 }
