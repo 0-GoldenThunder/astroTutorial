@@ -1,6 +1,6 @@
 import {
   organizedArray
-} from './Retriever.js';
+} from '../components./script/Retriever.js';
 
 function generateHtmlList(objectArray, listType = 'ul', parent = null) {
   const listElement = document.createElement(listType);
